@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+
+    <link rel="icon" href="{{ url_for('static', filename='img/pokebola.webp') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+
+<body>
+
+<!-- ===============================
+     🌄 BACKGROUND SCENE
+     =============================== -->
+<div class="bg-scene">
+
+    <div class="container">
+
+        <!-- Flying legendaries -->
+        <img src="{{ url_for('static', filename='bg/Pokemons/Lendarios/Latias.png') }}" class="latias">
+        <img src="{{ url_for('static', filename='bg/Pokemons/Lendarios/Latios.png') }}" class="latios">
+
+        <!-- Background layers -->
+        <div class="container-fundo">
+            <div class="ceu"></div>
+        </div>
+
+        <div class="container-fundo">
+            <div class="mar"></div>
+        </div>
+
+        <div class="container-fundo">
+            <div class="gramado"></div>
+        </div>
+
+        <!-- Protagonists -->
+        <div class="brendon"></div>
+        <div class="may"></div>
+
+        <!-- Pokémons -->
+        <div class="manectrike"></div>
+        <div class="torchic"></div>
+
+    </div>
+</div>
+
+<!-- ===============================
+     📟 POKÉDEX UI (UNCHANGED)
+     =============================== -->
+<main>
+
+    <img src="" alt="pokemon" class="pokemon__image">
+
+    <h1 class="pokemon__data">
+        <span class="pokemon__number"></span> -
+        <span class="pokemon__name"></span>
+    </h1>
+
+    <p class="pokemon__description">Loading description...</p>
+
+    <form class="form">
+        <input type="search" class="input__search" placeholder="Name or Number" required>
+    </form>
+
+    <div class="buttons">
+        <button class="button btn-next">🎲 Random Pokémon</button>
+    </div>
+
+    <div class="joystick">
+        <div class="joystick-base">
+            <div class="joystick-stick"></div>
+        </div>
+    </div>
+
+    <img src="{{ url_for('static', filename='img/pokedexm.png') }}" class="pokedex">
+
+</main>
+
+</body>
+</html>

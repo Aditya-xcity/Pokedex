@@ -1,0 +1,260 @@
+/*#region Definir o estilo básico da página*/	
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+/*#endregion*/	
+
+/* #region Fundo */
+.container-fundo {
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* height: 1200px; */
+}
+.gramado {
+    background: url("Imagens/Background/Garamado\ perfeito.png") repeat-x;
+    height: 1160px;
+    width: 3840px;
+    animation: slide 7s linear infinite;
+}
+.mar{
+    background: url("Imagens/Background/mar.png") repeat-x;
+    height: 1160px;
+    width: 3840px;
+    animation: slide 110s linear infinite;
+}
+.ceu{
+    background: url("Imagens/Background/Ceu.png") repeat-x;
+    height: 1160px;
+    width: 3840px;
+    animation: slide 60s linear infinite;
+}
+@keyframes slide {
+    0% {
+      transform: translate(-1920px);
+    }
+    100% {
+      transform: translate(0);
+    }
+}
+/* #endregion */
+
+/* #region Lendários */
+.latias {
+    position: absolute;
+    top: 150px;  
+    right: 230px;
+    z-index: 1;
+    width: 260px;
+    height: auto;
+    animation:
+        parado 4s infinite ease-in-out 1s;
+}
+
+.latios {
+    position: absolute;
+    top: 400px;  
+    right: 380px;
+    z-index: 1;
+    width: 260px;
+    height: auto;
+    animation: 
+        parado 4s infinite ease-in-out;
+}
+@keyframes voo_horizontal {
+    0%{
+        transform: translateX(0) translateY(0)
+    }
+    50% {
+        transform: translateX(300px) translateY(25px)
+    }
+    100% {
+        transform: translateX(0) translateY(0)
+    }
+}
+@keyframes parado {
+    0% {
+        width: 260px;
+    }
+    50% {
+        width: 340px;
+    }
+    100% {
+        width: 260px;
+    }
+}
+/* #endregion */
+
+/* #region Protagonistas */
+.brendon {
+    position: absolute;
+    bottom: 110px;
+    right: 350px;
+    width: 143px;
+    height: 150px;
+    background-size: cover;
+    animation: bikeBrendon 400ms infinite;
+}
+.may {
+    --tamanho: .55;
+    position: absolute;
+    bottom: 150px;
+    right: 150px;
+    width: calc(303px * var(--tamanho));
+    height: calc(350px * var(--tamanho));
+    background-size: cover;
+    animation: bikeMay 400ms infinite;
+}
+@keyframes bikeBrendon {
+    0% {
+        background-image: url('Imagens/Bike/BikeBrendon/frame-1.png');
+    }
+    25% {
+        background-image: url('Imagens/Bike/BikeBrendon/frame-2.png');
+    }
+    50% {
+        background-image: url('Imagens/Bike/BikeBrendon/frame-3.png');
+    }
+    75% {
+        background-image: url('Imagens/Bike/BikeBrendon/frame-4.png');
+    }
+    100% {
+        background-image: url('Imagens/Bike/BikeBrendon/frame-1.png');
+    }
+}
+@keyframes bikeMay {
+    0% {
+        background-image: url('Imagens/Bike/BikeMay/frame-1.png');
+    }
+    25% {
+        background-image: url('Imagens/Bike/BikeMay/frame-2.png');
+    }
+    50% {
+        background-image: url('Imagens/Bike/BikeMay/frame-3.png');
+    }
+    75% {
+        background-image: url('Imagens/Bike/BikeMay/frame-4.png');
+    }
+    100% {
+        background-image: url('Imagens/Bike/BikeMay/frame-1.png');
+    }
+}
+/* #endregion */
+
+/* #region Pokemons */
+    /* #region Manectrike */
+.manectrike {
+    --tamanho: 2.5;
+    position: absolute;
+    bottom: 60px;
+    right: 500px;
+    width: calc(54px * var(--tamanho));
+    height: calc(48px * var(--tamanho));
+    background-size: cover;
+    animation: 
+        animaManectrike 300ms infinite,
+        manectrikeStandby 6s infinite ease-in-out;
+}
+@keyframes animaManectrike {
+    0% {
+        background-image: url('Imagens/Pokemons/Manectrike/Manectrike-1.png');
+        
+    }
+    25% {
+        background-image: url('Imagens/Pokemons/Manectrike/Manectrike-2.png');
+        
+    }
+    50% {
+        background-image: url('Imagens/Pokemons/Manectrike/Manectrike-3.png');
+        
+    }
+    75% {
+        background-image: url('Imagens/Pokemons/Manectrike/Manectrike-4.png');
+        
+    }
+    100% {
+        background-image: url('Imagens/Pokemons/Manectrike/Manectrike-1.png');
+        
+    }
+}
+@keyframes manectrikeStandby {
+    0% {
+        transform: translateX(0)
+    }
+    25% {
+        transform: translateX(-170px)
+    }
+    100% {
+        transform: translateX(0)
+    }
+}
+    /* #endregion */
+
+    /* #region Torchic */
+.torchic {
+    --tamanho: 2.5;
+    --tempo: 250ms;
+    filter: saturate(200%);
+    position: absolute;
+    bottom: 150px;
+    right: 150px;
+    width: calc(17px * var(--tamanho));
+    height: calc(24px * var(--tamanho));
+    background-size: cover;
+    animation: 
+        animaTorchic var(--tempo) infinite,
+        orbit 3s linear infinite;
+}
+
+@keyframes orbit {
+    0% {
+        transform: rotate(0deg) translateX(-150px) rotate(0deg);
+    }
+    60% {
+        transform: rotate(-50deg) translateX(-150px) rotate(50deg);
+    }
+    100% {
+        transform: translateX(-150px);
+    }
+}
+@keyframes animaTorchic {
+    0% {
+        background-image: url('Imagens/Pokemons/Torchic/Torchic-1.png');
+        
+    }
+    25% {
+        background-image: url('Imagens/Pokemons/Torchic/Torchic-2.png');
+        
+    }
+    50% {
+        background-image: url('Imagens/Pokemons/Torchic/Torchic-1.png');
+        
+    }
+    75% {
+        background-image: url('Imagens/Pokemons/Torchic/Torchic-3.png');
+        
+    }
+    100% {
+        background-image: url('Imagens/Pokemons/Torchic/Torchic-1.png');
+        
+    }
+}
+
+/* #endregion */
+/* #endregion */
